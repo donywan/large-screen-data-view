@@ -1,7 +1,7 @@
 # 大屏数据可视化DEMO
-## 项目环境
+## Environment 
 项目基于nodejs，使用VUE CLI 3.X构建
-## 项目依赖
+## Dependenics
 1. "axios": "^0.19.0", // 异步提交请求
 2. "bootstrap": "^4.3.1", // 响应式
 3. "core-js": "^2.6.5",
@@ -11,8 +11,15 @@
 7. "vue-echarts": "^4.0.3",// 未用
 8. "vue-router": "^3.0.3",
 9. "vuex": "^3.0.1"
-## 预览
+## Preview
+![preview](https://raw.githubusercontent.com/DonyWan/large-screen-data-view/master/public/demo.png)
 ## Project setup
+```
+git clone git@github.com:DonyWan/large-screen-data-view.git
+```
+```
+cd large-screen-data-view
+```
 ```
 npm install
 ```
