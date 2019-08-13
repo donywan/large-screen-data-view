@@ -23,7 +23,8 @@
           <div class="col-lg-4 fill-h">
             <div class="xpanel-wrapper xpanel-wrapper-7">
               <div class="xpanel">
-                  <v-map class="fill-h" :option="mapOption"/>
+                  <!-- <v-map class="fill-h" :option="mapOption"/> -->
+                  <v-sankey class="fill-h" :option="sankeyOption"/>
               </div>
             </div>
             <div class="xpanel-wrapper xpanel-wrapper-3">
@@ -53,13 +54,15 @@
 import VFunnel from "../components/Funnel";
 import VPie from "../components/Pie";
 import VLine from "../components/Line";
-import VMap from "../components/Map";
+// import VMap from "../components/Map";
 import VBar from "../components/Bar";
+import VSankey from '../components/Sankey';
 import FunnelOption from '../config/funnel';
 import PieOption from '../config/pie';
 import LineOption from '../config/line';
-import MapOption from '../config/map';
+// import MapOption from '../config/map';
 import BarOption from '../config/bar';
+import SankeyOption from '../config/sankey';
 
 export default {
   data() {
@@ -67,16 +70,18 @@ export default {
         funnelOption: FunnelOption,
         pieOption: PieOption,
         lineOption: LineOption,
-        mapOption: MapOption,
+        // mapOption: MapOption,
         barOption: BarOption,
+        sankeyOption: SankeyOption,
     };
   },
   components: {
     "v-funnel": VFunnel,
     "v-pie": VPie,
     "v-line": VLine,
-    "v-map": VMap,
-    "v-bar": VBar
+    // "v-map": VMap,
+    "v-bar": VBar,
+    'v-sankey': VSankey,
   },
   methods:{
       change(){

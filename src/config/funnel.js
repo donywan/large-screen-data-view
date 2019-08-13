@@ -84,5 +84,5 @@ export default {
         }
     ],
 
-    color: ['#4edebd', '#55bfe6', '#938cd0', '#6877f6', '#4c5bbc', '#34c189']
+    // color: ['#4edebd', '#55bfe6', '#938cd0', '#6877f6', '#4c5bbc', '#34c189']
 }

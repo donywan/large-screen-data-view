@@ -7,6 +7,8 @@ import "echarts/lib/chart/bar";
 import "echarts/lib/component/legend";
 import "echarts/lib/component/tooltip";
 // import Bar from "../config/bar";
+import Walden from '../theme/walden.project.json';
+
 export default {
   data() {
     return {};
@@ -14,7 +16,8 @@ export default {
   props: ["option"],
   methods: {
     drawBar() {
-      this.bar = Echarts.init(document.getElementById("bar"));
+      Echarts.registerTheme('walden',Walden)
+      this.bar = Echarts.init(document.getElementById("bar"),'walden');
       this.bar.setOption(this.option);
       window.addEventListener("resize", this.resizeHandle);
     },

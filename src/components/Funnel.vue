@@ -10,6 +10,7 @@ import "echarts/lib/chart/funnel";
 import "echarts/lib/component/legend";
 import "echarts/lib/component/tooltip";
 // import Option from "../config/funnel";
+import Walden from '../theme/walden.project.json';
 
 export default {
   data() {
@@ -21,7 +22,8 @@ export default {
   methods: {
     // 创建流程图
     drawFunnel() {
-      this.funnel = Echarts.init(document.getElementById("funnel"));
+      Echarts.registerTheme('walden',Walden)
+      this.funnel = Echarts.init(document.getElementById("funnel"),'walden');
       this.funnel.setOption(this.option);
       window.addEventListener("resize", this.resizeHandel);
     },

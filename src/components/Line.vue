@@ -10,6 +10,8 @@ import "echarts/lib/chart/line";
 import "echarts/lib/component/legend";
 import "echarts/lib/component/tooltip";
 // import Line from "../config/line";
+import Walden from '../theme/walden.project.json';
+import Macarons from '../theme/macarons.project.json';
 
 export default {
   data() {
@@ -20,8 +22,11 @@ export default {
   props: ["option"], // 父组件传递给子组件数据
   methods: {
     drawLine() {
+      // 注册主题
+      Echarts.registerTheme('macarons',Macarons)
+      Echarts.registerTheme('walden', Walden)
       // 初始化图表
-      this.line = Echarts.init(document.getElementById("line"));
+      this.line = Echarts.init(document.getElementById("line"),'macarons');
       this.line.setOption(this.option);
       // 监听窗体变化
       window.addEventListener("resize", this.resizeHandle);

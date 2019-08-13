@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div id="pie" class="pie"></div>
+    <div id="sankey" class="sankey"></div>
   </div>
 </template>
 <script>
 import Echarts from "echarts/lib/echarts";
 // import Option from "../config/pie";
-import "echarts/lib/chart/pie";
+import "echarts/lib/chart/sankey";
 import "echarts/lib/component/legend";
 import "echarts/lib/component/tooltip";
-import Walden from '../theme/walden.project.json';
+import Macarons from '../theme/macarons.project.json';
 
 export default {
   data() {
@@ -19,18 +19,18 @@ export default {
   },
   props: ["option"],
   methods: {
-    drawPie() {
-      Echarts.registerTheme('walden',Walden)
-      this.pie = Echarts.init(document.getElementById("pie"),'walden');
-      this.pie.setOption(this.option);
+    drawSankey() {
+        Echarts.registerTheme('macarons',Macarons)
+      this.sankey= Echarts.init(document.getElementById("sankey"),'macarons');
+      this.sankey.setOption(this.option);
       window.addEventListener("resize", this.resizeHandle);
     },
     resizeHandle() {
-      this.pie.resize();
+      this.sankey.resize();
     }
   },
   mounted() {
-    this.drawPie();
+    this.drawSankey();
   },
   destroyed() {
     window.removeEventListener("resize", this.resizeHandle);
@@ -38,7 +38,7 @@ export default {
   watch: {
     option: {
       handler(val) {
-        this.pie.setOption(val, true);
+        this.sankey.setOption(val, true);
       },
       deep: true
     }
@@ -46,8 +46,9 @@ export default {
 };
 </script>
 <style>
-.pie {
+.sankey{
   width: 100%;
   height: 100%;
 }
 </style>
+
