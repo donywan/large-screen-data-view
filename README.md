@@ -1,8 +1,8 @@
 # 大屏数据可视化DEMO
 ## 预览
 ![preview](https://raw.githubusercontent.com/DonyWan/large-screen-data-view/master/public/demo.png)
-![preview](https://raw.githubusercontent.com/DonyWan/large-screen-data-view/master/public/demo-1.png)
-![preview](https://raw.githubusercontent.com/DonyWan/large-screen-data-view/master/public/demo-2.png)
+![preview](https://raw.githubusercontent.com/DonyWan/large-screen-data-view/dev/public/demo-1.png)
+![preview](https://raw.githubusercontent.com/DonyWan/large-screen-data-view/dev/public/demo-2.png)
 ### 克隆dev分支版本
 ```
 git clone -b dev git@github.com:DonyWan/large-screen-data-view.git
