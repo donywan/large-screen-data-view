@@ -1,21 +1,11 @@
 # 大屏数据可视化DEMO
-## Environment 
-项目基于nodejs，使用VUE CLI 3.X构建
-## Dependenics
-1. "axios": "^0.19.0", // 异步提交请求
-2. "bootstrap": "^4.3.1", // 响应式
-3. "core-js": "^2.6.5",
-4. "echarts": "^4.2.1", // 图表展示
-5. "element-ui": "^2.10.1",// 未用
-6. "vue": "^2.6.10",
-7. "vue-echarts": "^4.0.3",// 未用
-8. "vue-router": "^3.0.3",
-9. "vuex": "^3.0.1"
-## Preview
+## 预览
 ![preview](https://raw.githubusercontent.com/DonyWan/large-screen-data-view/master/public/demo.png)
-## Project setup
+![preview](https://raw.githubusercontent.com/DonyWan/large-screen-data-view/master/public/demo-1.png)
+![preview](https://raw.githubusercontent.com/DonyWan/large-screen-data-view/master/public/demo-2.png)
+### 克隆dev分支版本
 ```
-git clone git@github.com:DonyWan/large-screen-data-view.git
+git clone -b dev git@github.com:DonyWan/large-screen-data-view.git
 ```
 ```
 cd large-screen-data-view
@@ -23,26 +13,24 @@ cd large-screen-data-view
 ```
 npm install
 ```
-
-### Compiles and hot-reloads for development
+### 编译并启动
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
+或者使用vue图形化启动方式
+```
+vue ui
+```
+### 编译用来部署到生产环境
 ```
 npm run build
 ```
-
-### Run your tests
+## NGINX跨域代理配置
 ```
-npm run test
+server {
+    location /api/ {
+	    proxy_pass http://x.x.x.x:8080/carnot_webtrends/;
+	}
+}
+注意：端口后面跟项目地址
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
