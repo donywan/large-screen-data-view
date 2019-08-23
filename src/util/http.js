@@ -1,25 +1,27 @@
 // 引入axios
 import axios from 'axios';
-import store from '../store';
+// import store from '../store';
 import router from '../router';
 
 // 创建axios实例
 const httpService = axios.create({
     // url前缀-'https://some-domain.com/api/'
-    baseURL: 'http://127.0.0.1:8089/',//process.env.BASE_API, // 需自定义
+    // baseURL: 'http://10.243.33.21:8080/carnot_webtrends/',//process.env.BASE_API, // 需自定义
+    baseURL: '/api/',
     // 请求超时时间
-    timeout: 5000 // 需自定义
+    // timeout: 1000 // 需自定义
 });
 
 // request拦截器
 httpService.interceptors.request.use(
     config => {
         // console.log('请求：'+store)
-        const token = store.state.token;
+        // const token = store.state.token;
+        const token = ''
         // 根据条件加入token-安全携带
         if ('' != token) { // 需自定义
             // 让每个请求携带token
-            config.headers['token'] = token;
+            // config.headers['token'] = token;
         }
         return config;
     }, 

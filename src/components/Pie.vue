@@ -9,7 +9,7 @@ import Echarts from "echarts/lib/echarts";
 import "echarts/lib/chart/pie";
 import "echarts/lib/component/legend";
 import "echarts/lib/component/tooltip";
-import Walden from '../theme/walden.project.json';
+import Walden from "../theme/walden.project.json";
 
 export default {
   data() {
@@ -17,12 +17,15 @@ export default {
       // option: Option
     };
   },
-  props: ["option"],
+  props: {option:{}},
   methods: {
+    setPieOption() {
+    },
     drawPie() {
-      Echarts.registerTheme('walden',Walden)
-      this.pie = Echarts.init(document.getElementById("pie"),'walden');
-      this.pie.setOption(this.option);
+      Echarts.registerTheme("walden", Walden);
+      this.pie = Echarts.init(document.getElementById("pie"), "walden");
+      this.pie.setOption(this.option, true);
+      // console.log(this.pie);
       window.addEventListener("resize", this.resizeHandle);
     },
     resizeHandle() {
@@ -38,6 +41,7 @@ export default {
   watch: {
     option: {
       handler(val) {
+        // let data = JSON.parse(JSON.stringify(val))
         this.pie.setOption(val, true);
       },
       deep: true

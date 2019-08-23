@@ -1,6 +1,5 @@
-import LineOption from '../config/line';
+import BarOption from '../config/bar';
 import DataSetService from './dataset.service';
-import { Object } from 'core-js';
 // 调整配置
 function changeOption(data) {
     // 定义一个serise数组
@@ -9,17 +8,17 @@ function changeOption(data) {
         let objSize = Object.keys(data[0]).length - 1;
         for (let i = 0; i < objSize; i++) {
             let serise = {}
-            serise.type = 'line'
+            serise.type = 'bar'
             seriseArr.push(serise)
         }
     }
-
-    LineOption.series = seriseArr
-    LineOption.dataset.source = data
+    BarOption.series = seriseArr
+    BarOption.dataset.source = data
+    // console.log('bar',BarOption)
 }
 // 获取折线图数据
 function getData(param) {
-    DataSetService.getData(param).then((response) => {
+    DataSetService.getData(param).then((response)=>{
         // 更改图表配置
         changeOption(response)
     })

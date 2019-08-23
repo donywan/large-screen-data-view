@@ -5,7 +5,7 @@ export default {
     },
     tooltip: {
         trigger: "item",
-        formatter: "{a} <br/>{b} : {c}%"
+        formatter: "{b} : {c}"
     },
 
     legend: {
@@ -15,41 +15,41 @@ export default {
         }
     },
     series: [
+        // {
+        //     name: "预期",
+        //     type: "funnel",
+        //     left: "10%",
+        //     width: "80%",
+        //     label: {
+        //         show: true
+        //         // normal: {
+        //         //     formatter: '{b}预期'
+        //         // },
+        //         // emphasis: {
+        //         //     position:'inside',
+        //         //     formatter: '{b}预期: {c}%'
+        //         // }
+        //     },
+        //     labelLine: {
+        //         normal: {
+        //             show: false
+        //         }
+        //     },
+        //     itemStyle: {
+        //         normal: {
+        //             opacity: 0.7
+        //         }
+        //     },
+        //     data: [
+        //         { value: 60, name: "访问" },
+        //         { value: 40, name: "咨询" },
+        //         { value: 20, name: "订单" },
+        //         { value: 80, name: "点击" },
+        //         { value: 100, name: "展现" }
+        //     ]
+        // },
         {
-            name: "预期",
-            type: "funnel",
-            left: "10%",
-            width: "80%",
-            label: {
-                show: false
-                // normal: {
-                //     formatter: '{b}预期'
-                // },
-                // emphasis: {
-                //     position:'inside',
-                //     formatter: '{b}预期: {c}%'
-                // }
-            },
-            labelLine: {
-                normal: {
-                    show: false
-                }
-            },
-            itemStyle: {
-                normal: {
-                    opacity: 0.7
-                }
-            },
-            data: [
-                { value: 60, name: "访问" },
-                { value: 40, name: "咨询" },
-                { value: 20, name: "订单" },
-                { value: 80, name: "点击" },
-                { value: 100, name: "展现" }
-            ]
-        },
-        {
-            name: "实际",
+            // name: "实际",
             type: "funnel",
             left: "10%",
             width: "80%",
@@ -57,14 +57,15 @@ export default {
             label: {
                 normal: {
                     position: "inside",
-                    formatter: "{c}%",
+                    formatter: "{d}%",
                     textStyle: {
                         color: "#fff"
                     }
                 },
                 emphasis: {
                     position: "inside",
-                    formatter: "{b}实际: {c}%"
+                    formatter: "{b}: {c}"
+                    // formatter:"{a}:{b}:{c}:{d}:"
                 }
             },
             itemStyle: {

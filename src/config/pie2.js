@@ -1,8 +1,8 @@
 export default {
-   title: {
+    title: {
         //   text: "南丁格尔玫瑰图",
         //   subtext: "纯属虚构",
-        x: "center"
+        // x: "center"
     },
     dataset: {
         source: [
@@ -14,9 +14,9 @@ export default {
         ]
     },
     legend: {
-        orient: 'vertical',
-        x: "left",
-        y: "middle",
+        // orient: 'vertical',
+        // x: "left",
+        // y: "middle",
         // data: [
         //     "rose1",
         //     "rose2",
@@ -31,13 +31,13 @@ export default {
             color: 'white',
         }
     },
-    calculable: true,
+    // calculable: true,
     series: [
-        // { type: 'pie', seriesLayoutBy: 'row' },
-        // { type: 'pie', seriesLayoutBy: 'row' },
-        // { type: 'pie', seriesLayoutBy: 'row' },
-        // { type: 'pie', seriesLayoutBy: 'row' },
-        // { type: 'pie', seriesLayoutBy: 'row' }
+        { type: 'pie', seriesLayoutBy: 'row' },
+        { type: 'pie', seriesLayoutBy: 'row' },
+        { type: 'pie', seriesLayoutBy: 'row' },
+        { type: 'pie', seriesLayoutBy: 'row' },
+        { type: 'pie', seriesLayoutBy: 'row' }
         // {
         //     name: "面积模式",
         //     type: "pie",
@@ -56,5 +56,5 @@ export default {
         //         // { value: 40, name: "rose8" }
         //     ]
         // }
-    ] 
+    ]
 }
